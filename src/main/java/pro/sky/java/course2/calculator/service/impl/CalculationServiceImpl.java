@@ -22,6 +22,13 @@ public class CalculationServiceImpl implements CalculationService {
     }
 
 
-
+    @Override
+    public String divide(Integer value, Integer value2) {
+        if (value2 == 0) {
+            return "Ошибка: на ноль не делиться";
+        }
+        int result = value / value2;
+        return value + " / " + value2 + " = " + result;
+    }
 
 }
